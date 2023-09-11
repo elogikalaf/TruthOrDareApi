@@ -1,0 +1,6 @@
+export enum USER_TYPE {
+  ADMIN = 'ADMIN',
+  BUSINESS = 'BUSINESS',
+  DEVELOPER = 'DEVELOPER',
+  USER = 'USER',
+}

@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgres"
+  url = env("DATABASE_URL")
+}
+
+model challengeModel {
+  id              Int      @id @default(autoincrement())
+  type            String
+  challenge       String
+  horny           Boolean
+  sex             String
+  couple          Boolean
+  isNearby        Boolean
+}
+
+enum Role {
+  USER 
+  EXECUTOR
+}

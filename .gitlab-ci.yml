@@ -1,0 +1,22 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - shopt -s extglob
+    - rm -fr /srv/octopass.backend.api/!(node_modules|.env.development|logs) || true
+    - cp -r ./* /srv/octopass.backend.api/
+    - cd /srv/octopass.backend.api/
+    #- if [ ! -d "/srv/logs/new.backend.api" ]; then mkdir -p "/srv/logs/new.backend.api"; fi
+    #- yarn install
+    - pnpm install
+    - npm run prisma:generate
+    - pm2 stop octopass-dev || true
+    - pm2 delete octopass-dev || true
+    - npm run build
+    - npm run deploy:dev
+  only:
+    - release-dev
+  tags: [octopass_dev]
+
