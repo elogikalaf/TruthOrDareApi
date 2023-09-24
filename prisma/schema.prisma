@@ -3,21 +3,17 @@ generator client {
 }
 
 datasource db {
-  provider = "postgres"
-  url = env("DATABASE_URL")
+    provider = "sqlite"
+    url      = "file:./dev.db"
 }
 
 model challengeModel {
   id              Int      @id @default(autoincrement())
   type            String
   challenge       String
-  horny           Boolean
+  adult           Boolean
   sex             String
   couple          Boolean
   isNearby        Boolean
 }
 
-enum Role {
-  USER 
-  EXECUTOR
-}

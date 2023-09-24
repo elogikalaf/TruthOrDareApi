@@ -16,7 +16,7 @@ export class FindChallengeDto {
 
     @IsBoolean()
     @ApiProperty({ example: true})
-    horny: boolean;
+    adult: boolean;
 
     @IsBoolean()
     @ApiProperty({ example: true})

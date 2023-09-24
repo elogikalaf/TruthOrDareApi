@@ -1,0 +1,28 @@
+{
+    "challenges": [
+        {
+            "type": "truth",
+            "challenge": "What is your biggest insecurity?.",
+            "couple": false,
+            "sex": "MF",
+            "adult": false,
+            "isNearby": false
+        },
+        {
+            "type": "dare",
+            "challenge": "let the rest of the group DM someone from your Instagram account.",
+            "couple": false,
+            "sex": "MF",
+            "adult": false,
+            "isNearby": true 
+        },
+        {
+            "type": "dare",
+            "challenge": "put 10 different available liquids into a cup and drink it. ",
+            "couple": false,
+            "sex": "MF",
+            "adult": false,
+            "isNearby": true
+        }
+    ]
+}

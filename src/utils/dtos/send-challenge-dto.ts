@@ -21,7 +21,7 @@ class challengeDto {
 
     @IsBoolean()
     @ApiProperty({ example: true})
-    horny: boolean;
+    adult: boolean;
 
     @IsBoolean()
     @ApiProperty({ example: true})
@@ -37,7 +37,7 @@ export class SendChallengeDtoList {
                 "challenge": "Sing a song in front of everyone.",
                 "couple": false,
                 "sex": "MF",
-                "horny": false,
+                "adult": false,
                 "isNearby": true 
             },
             {
@@ -45,7 +45,7 @@ export class SendChallengeDtoList {
                 "challenge": "who do you like",
                 "couple": false,
                 "sex": "MF",
-                "horny": false,
+                "adult": false,
                 "isNearby": false
             }
         ]

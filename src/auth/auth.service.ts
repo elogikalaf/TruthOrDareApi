@@ -25,12 +25,12 @@ export class AuthService {
   }
 
   async findChallenge(findChallengeDto: FindChallengeDto, req) {
-    const { type, couple, sex, horny, isNearby } = findChallengeDto;
+    const { type, couple, sex, adult, isNearby } = findChallengeDto;
     try {
       const where = {
         type,
         couple,
-        horny,
+        adult,
         sex: {
           contains: sex,
         },

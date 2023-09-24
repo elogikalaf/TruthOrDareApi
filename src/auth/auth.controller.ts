@@ -8,6 +8,7 @@ import {
   Res,
   Put,
   Delete,
+  Logger,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import {ApiBody, ApiOkResponse, ApiOperation, ApiTags} from '@nestjs/swagger';
@@ -49,6 +50,7 @@ export class AuthController {
   })
   @Public()
   async findChallege(@Body() body: FindChallengeDto,@Req() req, @Res() res) {
+    Logger.log(body)
     if (body.sex == "MF"){
       delete body.sex;
     }
